@@ -2,15 +2,13 @@ require 'api_constraints'
 
 Rails.application.routes.draw do
 
+  devise_for :users
+
   # API Definition
-
   # namespace :api - Directory holding controllers in this namespace, app/controllers/api
-
   # defaults: {format: :json} - Default format, media type, of HTTP Request
-
   # constraints: {subdomain: 'api'} - constrain subdomain to be 'api'. For
   # example, http://api.market_place_api.dev, the request's subdomain is 'api'.
-
   # path: '/' - All request to to path '/' will be mapped to the api namespace,
   # app/controllers/api
 
